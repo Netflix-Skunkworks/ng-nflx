@@ -1,0 +1,12 @@
+{
+  "name": "ng-nflx",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.6.1",
+    "karma": "^0.12.9",
+    "gulp-karma": "0.0.4",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
