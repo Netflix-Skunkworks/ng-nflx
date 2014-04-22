@@ -120,7 +120,7 @@ HttpMapReduce(configs, map, reduce).then(success, error, notification);
 //   {total: 5, errors: 0}
 //   {total: 9, errors: 0}
 // success is now: 
-//   {total: 9, error: 0}
+//   {total: 9, errors: 0}
 // notifications is: 
 //   [
 //     {total: 0, errors: 0},
