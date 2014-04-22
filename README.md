@@ -122,11 +122,11 @@ HttpMapReduce(configs, map, reduce).then(success, error, notification);
 // success is now: 
 //   {total: 9, error: 0}
 // notifications is: 
-// [
-//   {total: 0, errors: 0},
-//   {total: 2, errors: 0},
-//   {total: 5, errors: 0},
-// ]
+//   [
+//     {total: 0, errors: 0},
+//     {total: 2, errors: 0},
+//     {total: 5, errors: 0}
+//   ]
 ```
 
 ## Testing
