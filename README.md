@@ -103,18 +103,25 @@ var reduce = function(list) {
 var identity = function(any) {return any;};
 
 var success = function(_result_) {result = _result_;};
-var error = function(_result_) {error = _result_;};
+var error = function(_result_) {throw 'should not be called!'};
 var notification = function(_result_) {notifications.push(angular.copy(_result_));};
 
 HttpMapReduce(configs, map, reduce).then(success, error, notification);
 
+// Assuming the configs are returned in order (for illustrative purposes only!):
 // map function returns:
 //   {incremented: 2}
 //   {incremented: 3}
 //   {incremented: 4}
-// reduce function returns: {total: 9, error: 0}
-// success is now: {total: 9, error: 0}
-// assuming the configs are returned in order (for illustrative purposes only), notifications is: [
+// reduce function returns:
+//   {total: 0, errors: 0}
+//   {total: 2, errors: 0}
+//   {total: 5, errors: 0}
+//   {total: 9, errors: 0}
+// success is now: 
+//   {total: 9, error: 0}
+// notifications is: 
+// [
 //   {total: 0, errors: 0},
 //   {total: 2, errors: 0},
 //   {total: 5, errors: 0},
