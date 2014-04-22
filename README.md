@@ -100,7 +100,8 @@ var reduce = function(list) {
     }, {total: 0, errors: 0});
 }
 
-var identity = function(any) {return any;};
+var result = null;
+var notifications = [];
 
 var success = function(_result_) {result = _result_;};
 var error = function(_result_) {throw 'should not be called!'};
