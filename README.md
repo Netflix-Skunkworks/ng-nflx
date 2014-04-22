@@ -54,7 +54,6 @@ EngNotation(1e5, true);  // ['100.0', 'k']
 ```
 
 Turn distance ```1324``` into ```1.32 km```:
-
 ```
 var eng = EngNotation(distance, false);
 return eng[0] + ' ' + eng[1] + 'm';
@@ -114,8 +113,8 @@ HttpMapReduce(configs, map, reduce).then(success, error, notification);
 //   {incremented: 3}
 //   {incremented: 4}
 // reduce function returns: {total: 9, error: 0}
-// success now contains: {total: 9, error: 0}
-// assuming the configs are returned in order (for illustrative purposes only), notifications contains: [
+// success is now: {total: 9, error: 0}
+// assuming the configs are returned in order (for illustrative purposes only), notifications is: [
 //   {total: 0, errors: 0},
 //   {total: 2, errors: 0},
 //   {total: 5, errors: 0},
