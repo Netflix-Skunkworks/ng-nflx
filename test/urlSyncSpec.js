@@ -87,6 +87,20 @@ describe('UrlSync', function() {
     expect($location.search().foo).toBe('changed');
   });
 
+  it('should clear parameter when scope value is null', function() {
+    $location.search('foo', 'location');
+    UrlSync.sync(scope, {
+      foo: {expression: 'foo', init: '"init"'}
+    });
+    scope.$digest();
+    expect(scope.foo).toBe('location');
+    expect($location.search().foo).toBe('location');
+    scope.foo = null;
+    scope.$digest();
+    expect(scope.foo).toBe(null);
+    expect($location.search().foo).toBe(undefined);
+  });
+
   var locationObj = {
     'foo.a': 'A',
     'foo.b': 'B',

@@ -54,7 +54,7 @@ angular.module('nf.urlSync', [])
         if (value === undefined || value === '') {
           value = null;
         }
-        if (typeof value === 'object') {
+        if (value !== null && typeof value === 'object') {
           $location.search(angular.extend($location.search(), _.transform(value, function(result, value, key) {
             result[urlParam + '.' + key] = value;
           })));
