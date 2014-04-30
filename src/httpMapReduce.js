@@ -27,7 +27,7 @@ angular.module('nf.httpMapReduce', [])
         } else {
           deferred.notify(reduce(results, false));
         }
-      }
+      };
       configs.forEach(function(config) {
         $http(config)
           .success(function(data, status) {
